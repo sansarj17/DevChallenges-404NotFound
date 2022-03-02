@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --colorH1: #333333;
+  --colorP: #4f4f4f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  font-family: "Space Mono";
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "header header"
+    "img-content text-content";
+}
+
+.header {
+  grid-area: header;
+  padding: 40px 77px;
+  margin-bottom: 100px;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+.img-content {
+  grid-area: img-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.img-content img {
+  max-width: 450px;
+}
+.text-content {
+  grid-area: text-content;
+}
+h1 {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 95px;
+  letter-spacing: -0.035em;
+  padding-right: 100px;
+  margin-bottom: 20px;
+  color: #333333;
+}
+.text-content p {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.035em;
+  color: #4f4f4f;
+  padding-right: 250px;
+}
+button {
+  background-color: #333333;
+  border: none;
+  padding: 24px 43px;
+  font-family: "Space Mono";
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 64px;
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    /* max-width: ; */
+  }
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "img-content"
+      "text-content";
+    text-align: center;
+  }
+  .header {
+    padding: 24px;
+    text-align: left;
+    margin-bottom: 50px;
+  }
+
+  .img-content img {
+    max-width: 80%;
+  }
+  .text-content {
+    padding: 24px;
+    text-align: left;
+  }
+  h1 {
+    padding-right: 0;
+    font-size: 48px;
+    line-height: 70px;
+  }
+  .text-content p {
+    padding-right: 0;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
